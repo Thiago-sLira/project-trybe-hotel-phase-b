@@ -16,6 +16,10 @@ public class TrybeHotelContext : DbContext, ITrybeHotelContext
 
     public DbSet<Room> Rooms { get; set; } = null!;
 
+    public DbSet<Booking> Bookings { get; set; } = null!;
+
+    public DbSet<User> Users { get; set; } = null!;
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
         optionsBuilder.UseSqlServer
         (
@@ -30,15 +34,25 @@ public class TrybeHotelContext : DbContext, ITrybeHotelContext
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
-        // modelBuilder.Entity<Hotel>()
-        // .HasOne(h => h.City)
-        // .WithMany(c => c.Hotels)
-        // .HasForeignKey(h => h.CityId);
+        modelBuilder.Entity<Hotel>()
+        .HasOne(h => h.City)
+        .WithMany(c => c.Hotels)
+        .HasForeignKey(h => h.CityId);
 
-        // modelBuilder.Entity<Room>()
-        // .HasOne(r => r.Hotel)
-        // .WithMany(h => h.Rooms)
-        // .HasForeignKey(r => r.HotelId);
+        modelBuilder.Entity<Room>()
+        .HasOne(r => r.Hotel)
+        .WithMany(h => h.Rooms)
+        .HasForeignKey(r => r.HotelId);
+
+        modelBuilder.Entity<Booking>()
+        .HasOne(b => b.Room)
+        .WithMany(r => r.Bookings)
+        .HasForeignKey(b => b.RoomId);
+
+        modelBuilder.Entity<Booking>()
+        .HasOne(b => b.User)
+        .WithMany(u => u.Bookings)
+        .HasForeignKey(b => b.UserId);
     }
 
 }
