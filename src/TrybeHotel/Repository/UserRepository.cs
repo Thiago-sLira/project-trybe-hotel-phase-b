@@ -28,18 +28,20 @@ namespace TrybeHotel.Repository
                 Password = user.Password,
                 UserType = "client",
             };
+
             _context.Users.Add(newUser);
             _context.SaveChanges();
 
-            var content = from u in _context.Users
-                          where u.Email == user.Email
+            var content = from userInDb in _context.Users
+                          where userInDb.Email == userInDb.Email
                           select new UserDto
                           {
-                              userId = u.UserId,
-                              Name = u.Name,
-                              Email = u.Email,
-                              userType = u.UserType
+                              userId = userInDb.UserId,
+                              Name = userInDb.Name,
+                              Email = userInDb.Email,
+                              userType = userInDb.UserType
                           };
+
             return content.Last();
         }
 

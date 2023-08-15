@@ -31,7 +31,6 @@ namespace TrybeHotel.Controllers
 
             if (userFound != null)
             {
-                // Caso usuário já exista no banco, retorne status 409
                 return Conflict(new { message = "User email already exists" });
             }
 
