@@ -45,7 +45,16 @@ namespace TrybeHotel.Repository
 
         public UserDto GetUserByEmail(string userEmail)
         {
-            throw new NotImplementedException();
+            var content = from u in _context.Users
+                          where u.Email == userEmail
+                          select new UserDto
+                          {
+                              userId = u.UserId,
+                              Name = u.Name,
+                              Email = u.Email,
+                              userType = u.UserType
+                          };
+            return content.Last();
         }
 
         public IEnumerable<UserDto> GetUsers()
