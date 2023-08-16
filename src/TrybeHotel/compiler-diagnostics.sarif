@@ -14,6 +14,312 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
+          "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'Email' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'Password' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'Email' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'UserType' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 25,
+                  "endLine": 6,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 25,
+                  "endLine": 6,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'image' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 25,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 25,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'hotel' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 27,
+                  "endLine": 9,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 27,
+                  "endLine": 9,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
           "message": "O propriedade não anulável 'Secret' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
           "locations": [
             {
@@ -37,40 +343,6 @@
                   "startColumn": 23,
                   "endLine": 6,
                   "endColumn": 29
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/CityDto.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 23,
-                  "endLine": 6,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/CityDto.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 23,
-                  "endLine": 6,
-                  "endColumn": 27
                 }
               }
             }
@@ -188,109 +460,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 25,
-                  "endLine": 6,
-                  "endColumn": 29
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 25,
-                  "endLine": 6,
-                  "endColumn": 29
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'image' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 25,
-                  "endLine": 8,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 25,
-                  "endLine": 8,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'hotel' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 27,
-                  "endLine": 9,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/RoomDto.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 27,
-                  "endLine": 9,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/CityDto.cs",
                 "region": {
                   "startLine": 6,
                   "startColumn": 23,
@@ -303,80 +473,12 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/CityDto.cs",
                 "region": {
                   "startLine": 6,
                   "startColumn": 23,
                   "endLine": 6,
                   "endColumn": 27
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'Email' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 23,
-                  "endLine": 7,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 23,
-                  "endLine": 7,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'userType' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 23,
-                  "endLine": 8,
-                  "endColumn": 31
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 23,
-                  "endLine": 8,
-                  "endColumn": 31
                 }
               }
             }
@@ -596,6 +698,40 @@
           "locations": [
             {
               "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Models/City.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 23,
+                  "endLine": 11,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Models/City.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 23,
+                  "endLine": 11,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
                 "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Models/Hotel.cs",
                 "region": {
                   "startLine": 9,
@@ -658,133 +794,18 @@
           }
         },
         {
-          "ruleId": "CS8618",
+          "ruleId": "CS8603",
           "level": "warning",
-          "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "message": "Possível retorno de referência nula.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Models/City.cs",
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/UserRepository.cs",
                 "region": {
-                  "startLine": 11,
-                  "startColumn": 23,
-                  "endLine": 11,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Models/City.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 23,
-                  "endLine": 11,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 23,
-                  "endLine": 13,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 23,
-                  "endLine": 13,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'Email' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 23,
-                  "endLine": 14,
+                  "startLine": 65,
+                  "startColumn": 24,
+                  "endLine": 65,
                   "endColumn": 28
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 23,
-                  "endLine": 14,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'Password' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 23,
-                  "endLine": 15,
-                  "endColumn": 31
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/UserDto.cs",
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 23,
-                  "endLine": 15,
-                  "endColumn": 31
                 }
               }
             }
@@ -826,6 +847,30 @@
           "properties": {
             "warningLevel": 1
           }
+        },
+        {
+          "ruleId": "CA1827",
+          "level": "note",
+          "message": "Count() is used where Any() could be used instead to improve performance",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 17,
+                  "endLine": 59,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "OperationKey": "OperationBinaryLeft"
+            }
+          }
         }
       ],
       "rules": {
@@ -842,6 +887,35 @@
               "PortedFromFxCop",
               "Telemetry",
               "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1827": {
+          "id": "CA1827",
+          "shortDescription": "Do not use Count() or LongCount() when Any() can be used",
+          "fullDescription": "For non-empty collections, Count() and LongCount() enumerate the entire sequence, while Any() stops at the first item or the first item that satisfies a condition.",
+          "defaultLevel": "note",
+          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1827",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS8603": {
+          "id": "CS8603",
+          "shortDescription": "Possível retorno de referência nula.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8603)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
             ]
           }
         },

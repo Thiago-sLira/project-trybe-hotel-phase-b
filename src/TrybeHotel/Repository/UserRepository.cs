@@ -26,20 +26,20 @@ namespace TrybeHotel.Repository
                 Name = user.Name,
                 Email = user.Email,
                 Password = user.Password,
-                UserType = "client",
+                UserType = user.Email.Contains("admin") ? "admin" : "client",
             };
 
             _context.Users.Add(newUser);
             _context.SaveChanges();
 
-            var content = from userInDb in _context.Users
-                          where userInDb.Email == userInDb.Email
+            var content = from u in _context.Users
+                          where u.Email == newUser.Email
                           select new UserDto
                           {
-                              userId = userInDb.UserId,
-                              Name = userInDb.Name,
-                              Email = userInDb.Email,
-                              userType = userInDb.UserType
+                              UserId = u.UserId,
+                              Name = u.Name,
+                              Email = u.Email,
+                              UserType = u.UserType
                           };
 
             return content.Last();
@@ -51,12 +51,17 @@ namespace TrybeHotel.Repository
                           where u.Email == userEmail
                           select new UserDto
                           {
-                              userId = u.UserId,
+                              UserId = u.UserId,
                               Name = u.Name,
                               Email = u.Email,
-                              userType = u.UserType
+                              UserType = u.UserType
                           };
-            return content.Last();
+            if (content.Count() > 0)
+            {
+                return content.First();
+            }
+            return null;
+
         }
 
         public IEnumerable<UserDto> GetUsers()
