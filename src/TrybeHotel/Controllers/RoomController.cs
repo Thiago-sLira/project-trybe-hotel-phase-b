@@ -9,6 +9,7 @@ namespace TrybeHotel.Controllers
 {
     [ApiController]
     [Route("room")]
+    [Authorize(Policy = "admin")]
     public class RoomController : Controller
     {
         private readonly IRoomRepository _repository;
@@ -18,12 +19,14 @@ namespace TrybeHotel.Controllers
         }
 
         [HttpGet("{HotelId}")]
-        public IActionResult GetRoom(int HotelId){
+        public IActionResult GetRoom(int HotelId)
+        {
             return Ok(_repository.GetRooms(HotelId));
         }
 
         [HttpPost]
-        public IActionResult PostRoom([FromBody] Room room){
+        public IActionResult PostRoom([FromBody] Room room)
+        {
             return Created("", _repository.AddRoom(room));
         }
 
