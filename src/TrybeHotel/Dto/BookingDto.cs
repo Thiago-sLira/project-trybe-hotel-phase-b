@@ -4,7 +4,7 @@ namespace TrybeHotel.Dto
     {
         public string CheckIn { get; set; }
         public string CheckOut { get; set; }
-        public string GuestQuant { get; set; }
+        public int GuestQuant { get; set; }
         public int RoomId { get; set; }
     }
 
@@ -13,7 +13,7 @@ namespace TrybeHotel.Dto
         public int bookingId { get; set; }
         public string CheckIn { get; set; }
         public string CheckOut { get; set; }
-        public string guestQuant { get; set; }
+        public int guestQuant { get; set; }
         public RoomDto room { get; set; }
     }
 }

@@ -15,15 +15,18 @@ namespace TrybeHotel.Repository
         {
             var roomToBook = _context.Rooms.Find(booking.RoomId);
 
-            var user = _context.Users.Find(email);
+            var user = _context.Users.Where(u => u.Email == email).FirstOrDefault();
 
-            if (roomToBook.Capacity >= int.Parse(booking.GuestQuant))
+            // if (roomToBook == null || user == null)
+            //     return null;
+
+            if (roomToBook.Capacity >= booking.GuestQuant)
             {
                 var bookingToSave = new Booking
                 {
                     CheckIn = DateTime.Parse(booking.CheckIn),
                     CheckOut = DateTime.Parse(booking.CheckOut),
-                    GuestQuant = int.Parse(booking.GuestQuant),
+                    GuestQuant = booking.GuestQuant,
                     RoomId = booking.RoomId,
                     UserId = user.UserId
                 };
@@ -32,28 +35,29 @@ namespace TrybeHotel.Repository
                 _context.SaveChanges();
 
                 var content = from book in _context.Bookings
-                              join room in _context.Rooms on book.RoomId equals room.RoomId
-                              join hotel in _context.Hotels on room.HotelId equals hotel.HotelId
-                              join city in _context.Cities on hotel.CityId equals city.CityId
+                                  //   join room in _context.Rooms on book.RoomId equals room.RoomId
+                                  //   join hotel in _context.Hotels on room.HotelId equals hotel.HotelId
+                                  //   join city in _context.Cities on hotel.CityId equals city.CityId
+                              orderby book.BookingId
                               select new BookingResponse
                               {
                                   bookingId = book.BookingId,
                                   CheckIn = book.CheckIn.ToString("yyyy-MM-dd"),
                                   CheckOut = book.CheckOut.ToString("yyyy-MM-dd"),
-                                  guestQuant = book.GuestQuant.ToString(),
+                                  guestQuant = book.GuestQuant,
                                   room = new RoomDto
                                   {
-                                      roomId = room.RoomId,
-                                      name = room.Name,
-                                      capacity = room.Capacity,
-                                      image = room.Image,
+                                      roomId = book.Room.RoomId,
+                                      name = book.Room.Name,
+                                      capacity = book.Room.Capacity,
+                                      image = book.Room.Image,
                                       hotel = new HotelDto
                                       {
-                                          hotelId = room.Hotel.HotelId,
-                                          name = room.Hotel.Name,
-                                          address = room.Hotel.Address,
-                                          cityId = room.Hotel.CityId,
-                                          cityName = city.Name
+                                          hotelId = book.Room.Hotel.HotelId,
+                                          name = book.Room.Hotel.Name,
+                                          address = book.Room.Hotel.Address,
+                                          cityId = book.Room.Hotel.CityId,
+                                          cityName = book.Room.Hotel.City.Name
                                       }
                                   }
                               };

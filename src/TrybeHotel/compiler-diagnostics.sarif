@@ -626,40 +626,6 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "O propriedade não anulável 'guestQuant' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/BookingDto.cs",
-                "region": {
-                  "startLine": 16,
-                  "startColumn": 23,
-                  "endLine": 16,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/BookingDto.cs",
-                "region": {
-                  "startLine": 16,
-                  "startColumn": 23,
-                  "endLine": 16,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
           "message": "O propriedade não anulável 'room' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
           "locations": [
             {
@@ -751,40 +717,6 @@
                   "startColumn": 23,
                   "endLine": 6,
                   "endColumn": 31
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "O propriedade não anulável 'GuestQuant' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/BookingDto.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 23,
-                  "endLine": 7,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Dto/BookingDto.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 23,
-                  "endLine": 7,
-                  "endColumn": 33
                 }
               }
             }
@@ -1066,6 +998,27 @@
           }
         },
         {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possível argumento de referência nula para o parâmetro 'email' em 'BookingResponse IBookingRepository.Add(BookingDtoInsert booking, string email)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Controllers/BookingController.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 60,
+                  "endLine": 32,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "CS8618",
           "level": "warning",
           "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
@@ -1091,27 +1044,6 @@
                   "startColumn": 23,
                   "endLine": 11,
                   "endColumn": 27
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possível argumento de referência nula para o parâmetro 'email' em 'BookingResponse IBookingRepository.Add(BookingDtoInsert booking, string email)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Controllers/BookingController.cs",
-                "region": {
-                  "startLine": 31,
-                  "startColumn": 60,
-                  "endLine": 31,
-                  "endColumn": 65
                 }
               }
             }
@@ -1150,9 +1082,9 @@
               "resultFile": {
                 "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/BookingRepository.cs",
                 "region": {
-                  "startLine": 20,
+                  "startLine": 23,
                   "startColumn": 17,
-                  "endLine": 20,
+                  "endLine": 23,
                   "endColumn": 27
                 }
               }
@@ -1171,9 +1103,9 @@
               "resultFile": {
                 "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/BookingRepository.cs",
                 "region": {
-                  "startLine": 28,
+                  "startLine": 31,
                   "startColumn": 30,
-                  "endLine": 28,
+                  "endLine": 31,
                   "endColumn": 34
                 }
               }
@@ -1192,10 +1124,52 @@
               "resultFile": {
                 "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/BookingRepository.cs",
                 "region": {
-                  "startLine": 52,
+                  "startLine": 50,
+                  "startColumn": 48,
+                  "endLine": 50,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/BookingRepository.cs",
+                "region": {
+                  "startLine": 56,
                   "startColumn": 53,
-                  "endLine": 52,
-                  "endColumn": 63
+                  "endLine": 56,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/BookingRepository.cs",
+                "region": {
+                  "startLine": 60,
+                  "startColumn": 54,
+                  "endLine": 60,
+                  "endColumn": 74
                 }
               }
             }
@@ -1213,9 +1187,9 @@
               "resultFile": {
                 "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/BookingRepository.cs",
                 "region": {
-                  "startLine": 65,
+                  "startLine": 69,
                   "startColumn": 24,
-                  "endLine": 65,
+                  "endLine": 69,
                   "endColumn": 28
                 }
               }
@@ -1255,9 +1229,9 @@
               "resultFile": {
                 "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Program.cs",
                 "region": {
-                  "startLine": 88,
+                  "startLine": 89,
                   "startColumn": 22,
-                  "endLine": 88,
+                  "endLine": 89,
                   "endColumn": 29
                 }
               }
@@ -1272,6 +1246,27 @@
                   "startColumn": 1,
                   "endLine": 10,
                   "endColumn": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'AddClaims' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Services/TokenGenerator.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 32,
+                  "endLine": 41,
+                  "endColumn": 41
                 }
               }
             }
@@ -1302,27 +1297,6 @@
             "customProperties": {
               "OperationKey": "OperationBinaryLeft"
             }
-          }
-        },
-        {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'AddClaims' does not access instance data and can be marked as static",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Services/TokenGenerator.cs",
-                "region": {
-                  "startLine": 41,
-                  "startColumn": 32,
-                  "endLine": 41,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
           }
         }
       ],

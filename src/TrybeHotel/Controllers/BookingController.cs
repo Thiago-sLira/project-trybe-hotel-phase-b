@@ -11,7 +11,6 @@ namespace TrybeHotel.Controllers
 {
     [ApiController]
     [Route("booking")]
-    [Authorize(Policy = "client")]
 
     public class BookingController : Controller
     {
@@ -22,6 +21,8 @@ namespace TrybeHotel.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Authorize(Policy = "client")]
         public IActionResult Add([FromBody] BookingDtoInsert bookingInsert)
         {
             var token = HttpContext.User.Identity as ClaimsIdentity;
@@ -29,6 +30,8 @@ namespace TrybeHotel.Controllers
             var email = token?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
 
             var bookAdded = _repository.Add(bookingInsert, email);
+
+            Console.WriteLine(bookAdded);
 
             if (bookAdded != null)
             {
