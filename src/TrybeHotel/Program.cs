@@ -54,10 +54,10 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("Admin", policy => policy.RequireClaim(
+    options.AddPolicy("admin", policy => policy.RequireClaim(
         ClaimTypes.Email, ClaimTypes.Role, "admin"
         ));
-    options.AddPolicy("Client", policy => policy.RequireClaim(
+    options.AddPolicy("client", policy => policy.RequireClaim(
         ClaimTypes.Email
         ));
 });

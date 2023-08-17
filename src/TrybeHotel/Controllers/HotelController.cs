@@ -9,6 +9,7 @@ namespace TrybeHotel.Controllers
 {
     [ApiController]
     [Route("hotel")]
+    [Authorize(Policy = "admin")]
     public class HotelController : Controller
     {
         private readonly IHotelRepository _repository;
@@ -17,16 +18,17 @@ namespace TrybeHotel.Controllers
         {
             _repository = repository;
         }
-        
+
         [HttpGet]
-        public IActionResult GetHotels(){
+        public IActionResult GetHotels()
+        {
             return Ok(_repository.GetHotels());
         }
 
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        [Authorize(Policy = "admin")]
-        public IActionResult PostHotel([FromBody] Hotel hotel){
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult PostHotel([FromBody] Hotel hotel)
+        {
             return Created("", _repository.AddHotel(hotel));
         }
 
