@@ -73,7 +73,42 @@ namespace TrybeHotel.Repository
 
         public BookingResponse GetBooking(int bookingId, string email)
         {
-            throw new NotImplementedException();
+            var user = _context.Users.Where(u => u.Email == email).FirstOrDefault();
+
+            var booking = _context.Bookings.Find(bookingId);
+
+            if (booking == null || booking.UserId != user.UserId)
+            {
+                return null;
+            }
+            else
+            {
+                var content = from book in _context.Bookings
+                              orderby book.BookingId
+                              select new BookingResponse
+                              {
+                                  bookingId = book.BookingId,
+                                  CheckIn = book.CheckIn.ToString("yyyy-MM-dd"),
+                                  CheckOut = book.CheckOut.ToString("yyyy-MM-dd"),
+                                  guestQuant = book.GuestQuant,
+                                  room = new RoomDto
+                                  {
+                                      roomId = book.Room.RoomId,
+                                      name = book.Room.Name,
+                                      capacity = book.Room.Capacity,
+                                      image = book.Room.Image,
+                                      hotel = new HotelDto
+                                      {
+                                          hotelId = book.Room.Hotel.HotelId,
+                                          name = book.Room.Hotel.Name,
+                                          address = book.Room.Hotel.Address,
+                                          cityId = book.Room.Hotel.CityId,
+                                          cityName = book.Room.Hotel.City.Name
+                                      }
+                                  }
+                              };
+                return content.Last();
+            }
         }
 
         public Room GetRoomById(int RoomId)
