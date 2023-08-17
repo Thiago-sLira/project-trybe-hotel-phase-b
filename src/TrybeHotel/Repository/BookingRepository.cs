@@ -84,7 +84,7 @@ namespace TrybeHotel.Repository
             else
             {
                 var content = from book in _context.Bookings
-                              orderby book.BookingId
+                              where book.BookingId == bookingId
                               select new BookingResponse
                               {
                                   bookingId = book.BookingId,
@@ -107,7 +107,7 @@ namespace TrybeHotel.Repository
                                       }
                                   }
                               };
-                return content.Last();
+                return content.First();
             }
         }
 
