@@ -21,6 +21,7 @@ namespace TrybeHotel.Services
         }
         public string Generate(UserDto user)
         {
+            var claims = AddClaims(user);
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -38,7 +39,15 @@ namespace TrybeHotel.Services
 
         private ClaimsIdentity AddClaims(UserDto user)
         {
-            throw new NotImplementedException();
+            var claims = new ClaimsIdentity();
+            claims.AddClaim(new Claim(ClaimTypes.Email, user.Email));
+
+            if (user.UserType == "admin")
+            {
+                claims.AddClaim(new Claim(ClaimTypes.Role, "admin"));
+            }
+
+            return claims;
         }
     }
 }
