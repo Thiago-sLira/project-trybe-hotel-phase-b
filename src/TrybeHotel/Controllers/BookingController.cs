@@ -41,7 +41,6 @@ namespace TrybeHotel.Controllers
             }
         }
 
-
         [HttpGet("{Bookingid}")]
         public IActionResult GetBooking(int Bookingid)
         {

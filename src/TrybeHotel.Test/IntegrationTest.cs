@@ -80,12 +80,49 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
                     appContext.Rooms.Add(new Room { RoomId = 8, Name = "Room 8", Capacity = 3, Image = "Image 8", HotelId = 3 });
                     appContext.Rooms.Add(new Room { RoomId = 9, Name = "Room 9", Capacity = 4, Image = "Image 9", HotelId = 3 });
                     appContext.SaveChanges();
-                    appContext.Users.Add(new User { UserId = 1, Name = "Ana", Email = "ana@trybehotel.com", Password = "Senha1", UserType = "admin" });
-                    appContext.Users.Add(new User { UserId = 2, Name = "Beatriz", Email = "beatriz@trybehotel.com", Password = "Senha2", UserType = "client" });
-                    appContext.Users.Add(new User { UserId = 3, Name = "Laura", Email = "laura@trybehotel.com", Password = "Senha3", UserType = "client" });
+                    appContext.Users.Add(new User
+                    {
+                        UserId = 1,
+                        Name = "Ana",
+                        Email = "ana@trybehotel.com",
+                        Password = "Senha1",
+                        UserType = "admin"
+                    });
+                    appContext.Users.Add(new User
+                    {
+                        UserId = 2,
+                        Name = "Beatriz",
+                        Email = "beatriz@trybehotel.com",
+                        Password = "Senha2",
+                        UserType = "client"
+                    });
+                    appContext.Users.Add(new User
+                    {
+                        UserId = 3,
+                        Name = "Laura",
+                        Email = "laura@trybehotel.com",
+                        Password = "Senha3",
+                        UserType = "client"
+                    });
                     appContext.SaveChanges();
-                    appContext.Bookings.Add(new Booking { BookingId = 1, CheckIn = new DateTime(2023, 07, 02), CheckOut = new DateTime(2023, 07, 03), GuestQuant = 1, UserId = 2, RoomId = 1 });
-                    appContext.Bookings.Add(new Booking { BookingId = 2, CheckIn = new DateTime(2023, 07, 02), CheckOut = new DateTime(2023, 07, 03), GuestQuant = 1, UserId = 3, RoomId = 4 });
+                    appContext.Bookings.Add(new Booking
+                    {
+                        BookingId = 1,
+                        CheckIn = new DateTime(2023, 07, 02),
+                        CheckOut = new DateTime(2023, 07, 03),
+                        GuestQuant = 1,
+                        UserId = 2,
+                        RoomId = 1
+                    });
+                    appContext.Bookings.Add(new Booking
+                    {
+                        BookingId = 2,
+                        CheckIn = new DateTime(2023, 07, 02),
+                        CheckOut = new DateTime(2023, 07, 03),
+                        GuestQuant = 1,
+                        UserId = 3,
+                        RoomId = 4
+                    });
                     appContext.SaveChanges();
                 }
             });
@@ -107,7 +144,11 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
     [InlineData("/city")]
     public async Task TestPost(string url)
     {
-        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new City { CityId = 3, Name = "São Paulo" }), Encoding.UTF8, "application/json"));
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new City
+        {
+            CityId = 3,
+            Name = "São Paulo"
+        }), Encoding.UTF8, "application/json"));
         Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
     }
 
@@ -121,7 +162,13 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
 
         _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new Hotel { HotelId = 4, Name = "Trybe Hotel São Paulo", Address = "Address 4", CityId = 1 }), Encoding.UTF8, "application/json"));
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new Hotel
+        {
+            HotelId = 4,
+            Name = "Trybe Hotel São Paulo",
+            Address = "Address 4",
+            CityId = 1
+        }), Encoding.UTF8, "application/json"));
         Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
     }
 
@@ -130,7 +177,13 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
     [InlineData("/hotel")]
     public async Task TestGetHotel(string url)
     {
-        var token = new TokenGenerator().Generate(new UserDto { UserId = 1, Name = "Ana", Email = "ana@trybehotel.com", UserType = "admin" });
+        var token = new TokenGenerator().Generate(new UserDto
+        {
+            UserId = 1,
+            Name = "Ana",
+            Email = "ana@trybehotel.com",
+            UserType = "admin"
+        });
 
         _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
@@ -144,11 +197,24 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
     [InlineData("/room")]
     public async Task TestPostRoom(string url)
     {
-        var token = new TokenGenerator().Generate(new UserDto { UserId = 1, Name = "Ana", Email = "ana@trybehotel.com", UserType = "admin" });
+        var token = new TokenGenerator().Generate(new UserDto
+        {
+            UserId = 1,
+            Name = "Ana",
+            Email = "ana@trybehotel.com",
+            UserType = "admin"
+        });
 
         _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new Room { RoomId = 10, Name = "Room 10", Capacity = 2, Image = "Image 10", HotelId = 1 }), Encoding.UTF8, "application/json"));
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new Room
+        {
+            RoomId = 10,
+            Name = "Room 10",
+            Capacity = 2,
+            Image = "Image 10",
+            HotelId = 1
+        }), Encoding.UTF8, "application/json"));
         Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
     }
 
@@ -157,11 +223,83 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
     [InlineData("/room/1")]
     public async Task TestGetRoomId(string url)
     {
-        var token = new TokenGenerator().Generate(new UserDto { UserId = 1, Name = "Ana", Email = "ana@trybehotel.com", UserType = "admin" });
+        var token = new TokenGenerator().Generate(new UserDto
+        {
+            UserId = 1,
+            Name = "Ana",
+            Email = "ana@trybehotel.com",
+            UserType = "admin"
+        });
 
         _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-        
+
         var response = await _clientTest.GetAsync(url);
+        Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
+    }
+
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Delete de Room com Id")]
+    [InlineData("/room/1")]
+    public async Task TestDeleteRoomId(string url)
+    {
+        var token = new TokenGenerator().Generate(new UserDto
+        {
+            UserId = 1,
+            Name = "Ana",
+            Email = "ana@trybehotel.com",
+            UserType = "admin"
+        });
+
+        _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var response = await _clientTest.DeleteAsync(url);
+        Assert.Equal(System.Net.HttpStatusCode.NoContent, response?.StatusCode);
+    }
+
+    // Testes da rota /booking
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Post de Booking")]
+    [InlineData("/booking")]
+    public async Task TestPostBooking(string url)
+    {
+        var token = new TokenGenerator().Generate(new UserDto
+        {
+            UserId = 2,
+            Name = "Beatriz",
+            Email = "beatriz@trybehotel.com",
+            UserType = "client"
+        });
+
+        _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new BookingDtoInsert
+        {
+            CheckIn = "2030-08-27",
+            CheckOut = "2030-08-28",
+            GuestQuant = 1,
+            RoomId = 1
+        }), Encoding.UTF8, "application/json"));
+
+        Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
+    }
+
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Get de Booking com Id")]
+    [InlineData("/booking/1")]
+    public async Task TestGetBookingId(string url)
+    {
+        var token = new TokenGenerator().Generate(new UserDto
+        {
+            UserId = 2,
+            Name = "Beatriz",
+            Email = "beatriz@trybehotel.com",
+            UserType = "client"
+        });
+
+        _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var response = await _clientTest.GetAsync(url);
+        
         Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
     }
 
