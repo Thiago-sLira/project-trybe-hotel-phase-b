@@ -299,8 +299,43 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
         _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
         var response = await _clientTest.GetAsync(url);
-        
+
         Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
     }
 
+    // Testes da rota /user
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Get de Users")]
+    [InlineData("/user")]
+    public async Task TestGetUsers(string url)
+    {
+        var token = new TokenGenerator().Generate(new UserDto
+        {
+            UserId = 1,
+            Name = "Ana",
+            Email = "ana@trybehotel.com",
+            UserType = "admin"
+        });
+
+        _clientTest.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var response = await _clientTest.GetAsync(url);
+
+        Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
+    }
+
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Post de User")]
+    [InlineData("/user")]
+    public async Task TestPostUser(string url)
+    {
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new UserDtoInsert
+        {
+            Name = "João",
+            Email = "joao@trybehotel.com",
+            Password = "Senha4"
+        }), Encoding.UTF8, "application/json"));
+
+        Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
+    }
 }
