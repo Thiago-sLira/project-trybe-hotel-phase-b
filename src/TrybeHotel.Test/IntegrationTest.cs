@@ -338,4 +338,19 @@ public class IntegrationTest : IClassFixture<WebApplicationFactory<Program>>
 
         Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
     }
+
+    // Testes da rota /login
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Login")]
+    [InlineData("/login")]
+    public async Task TestLogin(string url)
+    {
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new LoginDto
+        {
+            Email = "laura@trybehotel.com",
+            Password = "Senha3"
+        }), Encoding.UTF8, "application/json"));
+
+        Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
+    }
 }
