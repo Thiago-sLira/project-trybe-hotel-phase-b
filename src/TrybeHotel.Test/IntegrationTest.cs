@@ -81,12 +81,32 @@ public class IntegrationTest: IClassFixture<WebApplicationFactory<Program>>
         Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
     }
     
+    // Testes da rota /city
     [Trait("Category", "Meus testes")]
     [Theory(DisplayName = "Teste de Post de City")]
     [InlineData("/city")]
     public async Task TestPost(string url)
     {
         var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new City { CityId = 3, Name = "São Paulo" }), Encoding.UTF8, "application/json"));
+        Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
+    }
+
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Get de City")]
+    [InlineData("/city")]
+    public async Task TestGetCity(string url)
+    {
+        var response = await _clientTest.GetAsync(url);
+        Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
+    }
+
+    // Testes da rota /hotel
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Post de Hotel")]
+    [InlineData("/hotel")]
+    public async Task TestPostHotel(string url)
+    {
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new Hotel { HotelId = 4, Name = "Trybe Hotel São Paulo", Address = "Address 4", CityId = 1 }), Encoding.UTF8, "application/json"));
         Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
     }
 
@@ -99,5 +119,22 @@ public class IntegrationTest: IClassFixture<WebApplicationFactory<Program>>
         Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
     }
     
-    
+    // Testes da rota /room
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Post de Room")]
+    [InlineData("/room")]
+    public async Task TestPostRoom(string url)
+    {
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new Room { RoomId = 10, Name = "Room 10", Capacity = 2, Image = "Image 10", HotelId = 1 }), Encoding.UTF8, "application/json"));
+        Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
+    }
+
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Get de Room")]
+    [InlineData("/room")]
+    public async Task TestGetRoom(string url)
+    {
+        var response = await _clientTest.GetAsync(url);
+        Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
+    }
 }
