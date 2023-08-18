@@ -10,8 +10,7 @@ using System.Text.Json;
 using System.Diagnostics;
 using System.Xml;
 using System.IO;
-
-
+using System.Text;
 
 public class IntegrationTest: IClassFixture<WebApplicationFactory<Program>>
 {
@@ -81,7 +80,24 @@ public class IntegrationTest: IClassFixture<WebApplicationFactory<Program>>
         var response = await _clientTest.GetAsync(url);
         Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
     }
-   
+    
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Post de City")]
+    [InlineData("/city")]
+    public async Task TestPost(string url)
+    {
+        var response = await _clientTest.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new City { CityId = 3, Name = "São Paulo" }), Encoding.UTF8, "application/json"));
+        Assert.Equal(System.Net.HttpStatusCode.Created, response?.StatusCode);
+    }
+
+    [Trait("Category", "Meus testes")]
+    [Theory(DisplayName = "Teste de Get de Hotel")]
+    [InlineData("/hotel")]
+    public async Task TestGetHotel(string url)
+    {
+        var response = await _clientTest.GetAsync(url);
+        Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
+    }
     
     
 }
