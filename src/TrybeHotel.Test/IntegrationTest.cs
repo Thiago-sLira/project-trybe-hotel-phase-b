@@ -130,11 +130,12 @@ public class IntegrationTest: IClassFixture<WebApplicationFactory<Program>>
     }
 
     [Trait("Category", "Meus testes")]
-    [Theory(DisplayName = "Teste de Get de Room")]
-    [InlineData("/room")]
-    public async Task TestGetRoom(string url)
+    [Theory(DisplayName = "Teste de Get de Room com Id")]
+    [InlineData("/room/1")]
+    public async Task TestGetRoomId(string url)
     {
         var response = await _clientTest.GetAsync(url);
         Assert.Equal(System.Net.HttpStatusCode.OK, response?.StatusCode);
     }
+    
 }

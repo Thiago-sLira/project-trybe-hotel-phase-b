@@ -9,6 +9,7 @@ namespace TrybeHotel.Controllers
 {
     [ApiController]
     [Route("hotel")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Authorize(Policy = "admin")]
     public class HotelController : Controller
     {
@@ -26,7 +27,6 @@ namespace TrybeHotel.Controllers
         }
 
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult PostHotel([FromBody] Hotel hotel)
         {
             return Created("", _repository.AddHotel(hotel));

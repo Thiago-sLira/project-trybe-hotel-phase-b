@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.1114" branch-rate="0.0555" version="1.9" timestamp="1692365089" lines-covered="117" lines-valid="1050" branches-covered="2" branches-valid="36">
+<coverage line-rate="0.1114" branch-rate="0.0555" version="1.9" timestamp="1692365152" lines-covered="117" lines-valid="1050" branches-covered="2" branches-valid="36">
   <sources>
     <source>/home/tlira/conteudoTrybe/projetosTrybe/5.Eletiva-CSharp/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/</source>
   </sources>

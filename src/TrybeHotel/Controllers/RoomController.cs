@@ -9,6 +9,7 @@ namespace TrybeHotel.Controllers
 {
     [ApiController]
     [Route("room")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Authorize(Policy = "admin")]
     public class RoomController : Controller
     {
